@@ -4,7 +4,7 @@
 */
 module.exports = class Page {
     /**
-    * Opens a sub page of the pages Indrasen
+    * Opens a sub page of the pages Indrasen Jagtap hooks
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     open (path) {
