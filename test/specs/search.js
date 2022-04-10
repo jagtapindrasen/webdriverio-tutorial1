@@ -7,8 +7,8 @@ const { default: resources } = require("../resources");
 const { waitForTextChange } = require("../utilities/helper");
 
 
-describe("Ebay Product Search", () => {
-  it("should open the main url and verify the title", async () => {
+describe("Ebay Product Search Allure Ind", () => {
+  it("should open the main url and verify the title1", async () => {
     await browser.url("https://www.ebay.com/");
     allureReporter.addFeature("Open brwoser Ind");
     await expect(browser).toHaveTitle(
@@ -16,7 +16,7 @@ describe("Ebay Product Search", () => {
     );
   });
 
-  it("should search for a product and verify the search text value", async () => {
+  it("should search for a product and verify the search text value1", async () => {
     const searchinp = $("#gh-ac");
     const searchbtn = $("#gh-btn");
     allureReporter.addFeature("Search Ind");
@@ -30,7 +30,7 @@ describe("Ebay Product Search", () => {
 //     await expect(browser).toHaveTitle("Laptop | eBay");
 //   });
 
-  it("should update the search category", async () => {
+  it("should update the search category1", async () => {
     // await waitForTextChange(SearchPage.category, "PC Laptops & Netbooks", 10000);
     const cat= $('#gh-cat option:nth-child(1)');
     allureReporter.addFeature("Search category Ind");
