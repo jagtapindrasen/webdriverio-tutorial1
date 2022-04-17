@@ -3,8 +3,8 @@ const SecurePage = require('../pageobjects/secure.page');
 import allureReporter from '@wdio/allure-reporter'
 
 
-describe('My Login application', () => {
-    it('should login with valid credentials', async () => {
+describe('My Login application1', () => {
+    it('should login with valid credentials11', async () => {
         await LoginPage.open();
         allureReporter.addFeature("Open brwoser default wala example Ind");
 
@@ -14,7 +14,7 @@ describe('My Login application', () => {
             'You logged into a secure area!');
     });
 
-    it('should open a new tab', async () => {
+    it('should open a new tab11', async () => {
         await browser.url('https://google.com')
         console.log(await browser.getTitle()) // outputs: "Google"
     
