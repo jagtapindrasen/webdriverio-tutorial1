@@ -4,7 +4,17 @@ import allureReporter from '@wdio/allure-reporter'
 
 
 describe('My Login application1', () => {
-    it('should login with valid credentials11', async () => {
+    // it('should login with valid credentials11', async () => {
+    //     await LoginPage.open();
+    //     allureReporter.addFeature("Open brwoser default wala example Ind");
+
+    //     await LoginPage.login('tomsmith', 'SuperSecretPassword!');
+    //     await expect(SecurePage.flashAlert).toBeExisting();
+    //     await expect(SecurePage.flashAlert).toHaveTextContaining(
+    //         'You logged into a secure area!');
+    // });
+
+    it('should login with valid credentials11', async function () {
         await LoginPage.open();
         allureReporter.addFeature("Open brwoser default wala example Ind");
 
