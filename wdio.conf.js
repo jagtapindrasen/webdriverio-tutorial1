@@ -4,14 +4,23 @@ exports.config = {
   // Browserstack Config
   //   user: process.env.BROWSERSTACK_USERNAME,
   //   key: process.env.BROWSERSTACK_KEY,
-  user: "indrasenjagtap_F9PEVx",
-  key: "MhRhKKLW9FQnyLbAxx2K",
+
+  //Below things user and key works perfect
+  //user: "indrasenjjagtap_3z25vf",
+  //key: "Mqnqs7sHUUubrh3Y84dH",
+
+  //Ignore the below things
+  // user: "indrasenjagtap_F9PEVx",
+  // key: "MhRhKKLW9FQnyLbAxx2K",
   //
   // ====================
   // Runner Configuration
   // ====================
   //
   //
+  // hostname: 'localhost',
+  // port: 4444,
+  // path: '/',
   // ==================
   // Specify Test Files
   // ==================
@@ -27,7 +36,8 @@ exports.config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
-  specs: ["./test/specs/**/example.e2e.js"],
+  //specs: ["./test/specs/**/*.js"],
+  specs: ["./test/specs/example.e2e.js"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -62,7 +72,7 @@ exports.config = {
       maxInstances: 5,
       //
       browserName: "chrome",
-      acceptInsecureCerts: true,
+      acceptInsecureCerts: true
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -70,6 +80,31 @@ exports.config = {
     },
     //{ maxInstances: 1, browserName: "firefox" },
   ],
+
+//Headless madhe chrome run karay cha asel then uncomment the belwo capabilities
+  // capabilities: [
+  //   {
+  //     acceptInsecureCerts: true,
+  //     unhandledPromptBehavior: 'accept',
+  //     browserName: 'chrome',
+  //     'goog:chromeOptions': {
+  //       args: [
+  //         '--no-sandbox',
+  //         '--disable-dev-shm-usage',
+  //         '--disable-gpu',
+  //         '--disable-extensions',
+  //         '--disable-popup-blocking',
+  //         '--disable-web-security',
+  //         '--incognito',
+  //         '--headless'
+  //       ],
+  //       prefs: {
+  //         directory_upgrade: true,
+  //         prompt_for_download: false
+  //       }
+  //     }
+  //   }
+  // ],
 
   commonCapabilities: {
     build: "browserstack-build-1",
@@ -124,6 +159,7 @@ exports.config = {
   services: ["chromedriver"],
   //services: ["selenium-standalone"],
   //services: ["browserstack"],
+  //services: ['docker'],
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
